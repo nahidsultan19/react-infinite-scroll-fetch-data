@@ -51,14 +51,16 @@ const ProductList = () => {
     <div>
       <h2>Product List</h2>
 
-      {products.map((product) => (
-        <Product
-          key={product.id}
-          title={product.title}
-          price={product.price}
-          thumbnail={product.thumbnail}
-        />
-      ))}
+      <div className="">
+        {products.map((product) => (
+          <Product
+            key={product.id}
+            title={product.title}
+            price={product.price}
+            thumbnail={product.thumbnail}
+          />
+        ))}
+      </div>
 
       {hasMore && <div ref={loaderRef}>Loading product list...</div>}
     </div>
